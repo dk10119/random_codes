@@ -1,4 +1,8 @@
 <?php
+
+// turn an array of names into the "who likes it" string in Facebook post.
+// should give different format when number of people change from 0 to 3 or more.
+
 function likes($names) {
   $othersCount = count($names) - 2;
   switch(count($names)) {
@@ -10,4 +14,9 @@ function likes($names) {
   }
 };
 
+// print var_dump(likes([]));
+// print var_dump(likes(['Alex']));
+// print var_dump(likes(['Alex', 'Jacob']));
+// print var_dump(likes(['Alex', 'Jacob', 'Mark']));
+// print var_dump(likes(['Alex', 'Jacob', 'Mark', 'Max']));
 print var_dump(likes(['Alex', 'Jacob', 'Mark', 'Max', 'John', 'Bob', 'Steve', 'Mary']));
